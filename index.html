@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body style="background-color: #2d2d2d; color: #fff"> 
+    
+
+<h1>Tabuada</h1>
+
+
+ <button onclick="MostrarTabuada()">Mostrar Tabuada</button>
+ <button onclick="Clear()">Limpar Tabuada</button>
+
+ <div id="output"></div>
+
+<script>
+
+    /*
+    PEDIR O USUARIO PARA DIGITAR UM NÚMERO = OK
+    MOSTRAR O NUMERO DE 1 A 1000
+
+    */ 
+
+    const output = document.getElementById("output")
+
+    function MostrarTabuada(){
+        let numero = parseFloat(prompt("Digite um número para realizar a tabuada"));
+        let resultado  = ""
+
+        for(i = 0; i <= 1000; i++){
+        resultado += (`${ numero } x ${ i } = ${( i * numero )} <br />`)
+        }
+
+        output.innerHTML = (`${ resultado }`)
+    }
+
+    function Clear(){
+        output.innerHTML = ""
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+<!-- <script src="functions.js"></script>
+<script src="udemy.js"></script> -->
+
+</body>
+</html>
